@@ -1,0 +1,38 @@
+main{
+    padding: 5%;
+}
+
+.title-h1 {
+width: 95%;
+padding-left: 3%;
+background-color: rgba(20, 14, 14, 0.356);
+}
+
+
+
+.noticia {
+background-color: white;
+border-radius: 5px;
+border: 1px solid black;
+
+text-align: left;
+padding: 5%;
+max-width: 30%;
+height: 5%;
+
+}
+
+
+.noticia img {
+    width: 100%;
+    margin: auto;
+}
+
+.noticia h2 {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.noticia p {
+    color: rgba(128, 128, 128, 0.719);
+}
