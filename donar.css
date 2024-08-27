@@ -1,0 +1,108 @@
+
+.donar {
+    text-align: center;
+    padding: 40px;
+}
+
+.donar h1 {
+    font-size: 32px;
+    color: #bf2e33;
+    margin-bottom: 20px;
+}
+
+.donar-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.donar-contenido p {
+    margin-bottom: 20px;
+}
+
+.boton-donar {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #bf2e33;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15%;
+}
+
+.boton-donar:hover {
+    background-color: #a0282b;
+}
+
+/* Adaptabilidad (Responsive) */
+@media (max-width: 768px) {
+    .donar {
+        padding: 20px;
+    }
+
+    .donar h1 {
+        font-size: 28px;
+    }
+
+    .donar-contenido {
+        font-size: 16px;
+    }
+
+    .boton-donar {
+        padding: 12px 25px;
+        font-size: 16px;
+        margin-bottom: 15%;
+    }
+}
+
+
+
+
+/* Estilo para el texto en main */
+main {
+    padding: 20px;
+    background-color: #ffdec4; /* Asegúrate de que el fondo coincida con el resto de la página */
+}
+
+main h2 {
+    font-size: 31px;
+    color: #bf2e33; /* Ajusta el color para que combine con tu esquema de colores */
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Asegúrate de que el color del texto sea legible */
+}
+
+main a {
+    color: #f4b400;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #ffce00;
+}
+
+.metodoA {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.metodoB {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15%;
+}
+
+.metodoB a{
+    color: blue;
+    text-decoration: underline;
+}
+
