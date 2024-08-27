@@ -1,0 +1,39 @@
+.titulo {
+    background-color: rgba(71, 65, 65, 0.788);
+}
+
+.titulo h2 {
+    text-align: center;
+   
+}
+
+
+.contenedor_imagen {
+    padding: 10%;
+   
+}
+
+main img {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.ver_mas {
+background-color: white;
+text-align: center;
+border: 1px solid black;
+
+width: 40%;
+padding: 2%;
+margin: auto;
+}
+
+.projectos {
+padding: 10%;
+}
+
+.projecto_1 {
+    background-color: rgba(71, 65, 65, 0.788);
+    border-radius: 5px;
+    padding-bottom: 10%;
+}

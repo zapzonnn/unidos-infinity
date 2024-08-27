@@ -1,0 +1,55 @@
+/* team.css */
+#team {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #team h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #bf2e33;
+  }
+  
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .team-member {
+    flex: 1 1 calc(50% - 40px); /* Ajusta el tamaño para 2 columnas con espacio */
+    max-width: 200px; /* Limita el ancho máximo de cada miembro */
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .position {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Estilos para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .team-member {
+      flex: 1 1 100%; /* En móviles, cada miembro ocupa el ancho completo */
+    }
+  }
+  

@@ -1,0 +1,133 @@
+section {
+  margin-top: 4%;
+}
+
+.parrafo-fotoL, .parrafo-fotoR {
+  display: flex; /* Alinea la imagen y el texto en una fila */
+  align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+  gap: 20px; /* Espacio entre el texto y la imagen */
+  max-width: 1000px; /* Limita el ancho máximo del contenedor */
+  margin: 20px auto; /* Centra el contenedor horizontalmente */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.parrafo-fotoL img {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  border-radius: 10px; /* Agrega bordes redondeados a la imagen */
+  object-fit: cover;
+}
+
+.parrafo-fotoR img {
+  width: 160px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  border-radius: 10px; /* Agrega bordes redondeados a la imagen */
+  object-fit: cover;
+}
+
+.parrafo-fotoL .text-content, .parrafo-fotoR .text-content {
+  max-width: 70%; /* Limita el ancho máximo del contenido de texto */
+}
+
+.parrafo-fotoL h2, .parrafo-fotoR h2 {
+  font-size: 24px;
+  color: #bf2e33;
+}
+
+.parrafo-fotoL h4, .parrafo-fotoR h4 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.parrafo-fotoL p, .parrafo-fotoR p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .parrafo-fotoL, .parrafo-fotoR {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      text-align: center; /* Centra el texto */
+  }
+
+  .parrafo-fotoL img, .parrafo-fotoR img {
+      margin-top: 20px; /* Espacio encima de la imagen */
+      width: 100%; /* Imagen ocupa todo el ancho */
+  }
+
+  .parrafo-fotoL .text-content, .parrafo-fotoR .text-content {
+      max-width: 100%; /* Texto ocupa todo el ancho */
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
+  /* Primer y tercer párrafo: texto a la derecha y imagen a la izquierda */
+  .parrafo-fotoL {
+      flex-direction: row-reverse; /* Texto a la derecha, imagen a la izquierda */
+  }
+
+  .parrafo-fotoL .text-content{
+    margin-left: 5%;
+  }
+
+  .parrafo-fotoR .text-content{
+    margin-left: 2%;
+  }
+
+  .parrafo-fotoR img{
+    margin-left: 5%;
+  }
+}
+
+
+
+.valores-section {
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5%;
+}
+
+.valores-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valores-container h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #bf2e33;
+}
+
+.valores-container h4 {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+}
+
+.valores-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.valores-container li {
+  font-family: 'New Amsterdam', serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.valores-container li strong {
+  font-weight: bold;
+  color: #333;
+}

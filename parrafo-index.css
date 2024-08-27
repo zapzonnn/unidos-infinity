@@ -1,0 +1,24 @@
+contenedor_presentacion img {
+    width: 100%;
+    opacity: 67%;
+    margin-bottom: -2%;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+  }
+  
+  
+  
+  .texto_de_presentacion {
+    text-align: center;
+    color: #bf2e33;
+    background-color: #ffdec4;
+    padding: 15%;
+  }
+
+ main img {
+   width: 100%;
+   opacity: 67%;
+   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, 
+   rgba(0, 0, 0, 0) 100%);
+   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+ }
+  
