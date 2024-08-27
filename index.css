@@ -1,133 +1,265 @@
-section {
-  margin-top: 4%;
+#portadaIMG {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: hidden; /* Asegura que el contenido fuera del contenedor sea ocultado */
+  display: flex; /* Utiliza flexbox para alinear el contenido */
+  flex-direction: column; /* Coloca el contenido en columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  height: 100vh; /* Ajusta la altura para llenar la pantalla del dispositivo */
 }
 
-.parrafo-fotoL, .parrafo-fotoR {
-  display: flex; /* Alinea la imagen y el texto en una fila */
-  align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
-  gap: 20px; /* Espacio entre el texto y la imagen */
-  max-width: 1000px; /* Limita el ancho máximo del contenedor */
-  margin: 20px auto; /* Centra el contenedor horizontalmente */
+#portadaIMG img {
+  position: absolute; /* Posiciona la imagen de manera absoluta dentro del contenedor */
+  top: 50%; /* Centra la imagen verticalmente */
+  left: 50%; /* Centra la imagen horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta la posición para que el centro de la imagen quede en el centro del contenedor */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la relación de aspecto */
+  min-width: 100%; /* Asegura que la imagen cubra al menos el ancho del contenedor */
+  min-height: 100%; /* Asegura que la imagen cubra al menos la altura del contenedor */
+  object-fit: cover; /* Cubre el contenedor manteniendo el aspecto de la imagen */
+  z-index: 1; /* Coloca la imagen detrás del texto */
+}
+
+.portada-text {
+  position: relative; /* Permite alinear el texto en relación con la imagen */
+  text-align: center; /* Centra el texto horizontalmente */
+  color: white;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 80%; /* Limita el ancho del texto */
+  letter-spacing: 1.5px;
+  z-index: 1; /* Asegura que el texto esté encima de la imagen */
 }
 
-.parrafo-fotoL img {
-  width: 200px; /* Ajusta el tamaño de la imagen */
-  height: auto;
-  border-radius: 10px; /* Agrega bordes redondeados a la imagen */
-  object-fit: cover;
+.portada-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.parrafo-fotoR img {
-  width: 160px; /* Ajusta el tamaño de la imagen */
-  height: auto;
-  border-radius: 10px; /* Agrega bordes redondeados a la imagen */
-  object-fit: cover;
+.portada-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.parrafo-fotoL .text-content, .parrafo-fotoR .text-content {
-  max-width: 70%; /* Limita el ancho máximo del contenido de texto */
+.portada-text button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  border: none;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
 }
 
-.parrafo-fotoL h2, .parrafo-fotoR h2 {
-  font-size: 24px;
-  color: #bf2e33;
-}
-
-.parrafo-fotoL h4, .parrafo-fotoR h4 {
-  font-size: 20px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.parrafo-fotoL p, .parrafo-fotoR p {
-  font-size: 16px;
-  color: #555;
+.portada-text button:hover {
+  background-color: #ffdd44;
 }
 
 /* Estilos para pantallas más pequeñas */
 @media (max-width: 768px) {
+  #portadaIMG {
+    height: auto; /* Ajusta la altura en dispositivos móviles */
+  }
+  
+  .portada-text {
+    padding: 10px; /* Ajusta el relleno para pantallas más pequeñas */
+    max-width: 90%; /* Aumenta el ancho máximo del texto */
+  }
+  
+  .portada-text h2 {
+    font-size: 2rem; /* Reduce el tamaño de la fuente para pantallas pequeñas */
+  }
+  
+  .portada-text h3 {
+    font-size: 1.25rem; /* Reduce el tamaño de la fuente para pantallas pequeñas */
+  }
+  
+  .portada-text button {
+    font-size: 1rem; /* Reduce el tamaño del botón para pantallas pequeñas */
+    padding: 8px 16px; /* Ajusta el relleno del botón */
+  }
+}
+  
+/* Animación de desvanecimiento */
+.fade-in {
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(50px); /* Inicia un poco desplazado hacia abajo */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transición suave */
+}
+
+/* Clase activa para hacer visible el elemento */
+.fade-in.visible {
+  opacity: 1; /* Totalmente visible */
+  transform: translateY(0); /* Regresa a la posición original */
+}
+  
+  section {
+    margin-top: 4%;
+  }
+  
+  
   .parrafo-fotoL, .parrafo-fotoR {
-      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-      text-align: center; /* Centra el texto */
+    display: flex; /* Alinea la imagen y el texto en una fila */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    gap: 20px; /* Espacio entre el texto y la imagen */
+    max-width: 1000px; /* Limita el ancho máximo del contenedor */
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-
-  .parrafo-fotoL img, .parrafo-fotoR img {
-      margin-top: 20px; /* Espacio encima de la imagen */
-      width: 100%; /* Imagen ocupa todo el ancho */
+  
+  
+  .parrafo-fotoL img {
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px; /* Agrega bordes redondeados a la imagen */
+    object-fit: cover;
   }
-
+  
+  
+  .parrafo-fotoR img {
+    width: 160px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px; /* Agrega bordes redondeados a la imagen */
+    object-fit: cover;
+  }
+  
+  
   .parrafo-fotoL .text-content, .parrafo-fotoR .text-content {
-      max-width: 100%; /* Texto ocupa todo el ancho */
+    max-width: 70%; /* Limita el ancho máximo del contenido de texto */
   }
-}
-
-/* Estilos para pantallas grandes */
-@media (min-width: 769px) {
-  /* Primer y tercer párrafo: texto a la derecha y imagen a la izquierda */
-  .parrafo-fotoL {
-      flex-direction: row-reverse; /* Texto a la derecha, imagen a la izquierda */
+  
+  
+  .parrafo-fotoL h2, .parrafo-fotoR h2 {
+    font-size: 24px;
+    color: #bf2e33;
+  }
+  
+  
+  .parrafo-fotoL h4, .parrafo-fotoR h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  
+  .parrafo-fotoL p, .parrafo-fotoR p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  
+  /* Estilos para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .parrafo-fotoL, .parrafo-fotoR {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        text-align: center; /* Centra el texto */
+    }
+  
+  
+    .parrafo-fotoL img, .parrafo-fotoR img {
+        margin-top: 20px; /* Espacio encima de la imagen */
+        width: 100%; /* Imagen ocupa todo el ancho */
+    }
+  
+  
+    .parrafo-fotoL .text-content, .parrafo-fotoR .text-content {
+        max-width: 100%; /* Texto ocupa todo el ancho */
+    }
   }
 
-  .parrafo-fotoL .text-content{
-    margin-left: 5%;
+  .portada-text {
+    position: relative; /* Permite alinear el texto en relación con la imagen */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: white;
+    padding: 20px;
+    max-width: 65%; /* Limita el ancho del texto */
+    letter-spacing: 1.5px;
+    z-index: 1; /* Asegura que el texto esté encima de la imagen */
   }
-
-  .parrafo-fotoR .text-content{
-    margin-left: 2%;
+  
+  
+  /* Estilos para pantallas grandes */
+  @media (min-width: 769px) {
+    /* Primer y tercer párrafo: texto a la derecha y imagen a la izquierda */
+    .parrafo-fotoL {
+        flex-direction: row-reverse; /* Texto a la derecha, imagen a la izquierda */
+    }
+  
+  
+    .parrafo-fotoL .text-content{
+      margin-left: 5%;
+    }
+  
+  
+    .parrafo-fotoR .text-content{
+      margin-left: 2%;
+    }
+  
+  
+    .parrafo-fotoR img{
+      margin-left: 5%;
+    }
   }
-
-  .parrafo-fotoR img{
-    margin-left: 5%;
+  
+  
+  
+  
+  
+  
+  .valores-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5%;
   }
-}
-
-
-
-.valores-section {
-  padding: 20px;
-  background-color: #f4f4f4;
-  color: #333;
-  margin-top: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 5%;
-}
-
-.valores-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.valores-container h2 {
-  text-align: center;
-  font-size: 24px;
-  color: #bf2e33;
-}
-
-.valores-container h4 {
-  text-align: center;
-  font-size: 20px;
-  color: #333;
-}
-
-.valores-container ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.valores-container li {
-  font-family: 'New Amsterdam', serif;
-  font-size: 18px;
-  margin-bottom: 15px;
-  line-height: 1.6;
-  color: #555;
-}
-
-.valores-container li strong {
-  font-weight: bold;
-  color: #333;
-}
+  
+  
+  .valores-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  .valores-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #bf2e33;
+  }
+  
+  
+  .valores-container h4 {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  
+  .valores-container ul {
+    margin-left: 3%;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  
+  .valores-container li {
+    font-family: 'New Amsterdam', serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  
+  .valores-container li strong {
+    font-weight: bold;
+    color: #333;
+  }
