@@ -1,0 +1,95 @@
+main {
+    padding: 5%;
+}
+
+.project-section  {
+    background-color: white;
+    padding: 10%;
+}
+
+ .contenido {
+    opacity: 100%;
+    margin-top: -40%;
+    
+ }
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    color: #000000;
+}
+
+.linea-corta {
+    border: 0;
+    height: 2px;      
+    background-color: #bf2e33; 
+    width: 15%;            
+    margin: auto;  
+    margin-bottom: 5%;
+}
+
+.presentacion {
+    margin: auto;
+    text-align: center;
+    width: 90%;
+    font-size: 19px;
+    margin-bottom: 15%;
+
+}
+
+.project-section-imagen img{
+    width: 100%;
+    opacity: 80;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.sub-contenido h2{
+    font-size: 27px;
+}
+
+.sub-contenido p {
+    font-size: 17px;
+    margin-bottom: 10%;
+}
+
+.sub-contenido ul {
+    font-size: 17px;
+    margin-bottom: 10%;
+}
+
+.h2colabora {
+    text-align: center;
+    font-size: 27px;
+    margin-top: 20%;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+    margin: auto;
+    max-width: 65%;
+    display: block;
+    max-height: 65%;
+}
+
+.carousel h2 {
+    text-align: center;
+    font-size: 27px;
+    margin-top: 15%;
+}
+
