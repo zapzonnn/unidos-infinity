@@ -4,10 +4,10 @@
     text-align: center;
   }
   
-  #team h2 {
+  #team-container h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #bf2e33;
+    text-align: center;
   }
   
   .team-container {
@@ -15,6 +15,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    margin-bottom: 20%;
   }
   
   .team-member {
@@ -39,6 +40,7 @@
     font-weight: bold;
     margin: 10px 0;
     color: #333;
+  
   }
   
   .position {
