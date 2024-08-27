@@ -29,4 +29,17 @@ main {
   margin-top: 60px;
 }
 
+.fade-in {
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(50px); /* Inicia un poco desplazado hacia abajo */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transición suave */
+}
+
+/* Clase activa para hacer visible el elemento */
+.fade-in.visible {
+  opacity: 1; /* Totalmente visible */
+  transform: translateY(0); /* Regresa a la posición original */
+}
+
+
 
