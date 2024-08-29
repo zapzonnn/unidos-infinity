@@ -119,5 +119,18 @@
     .team-member {
       flex: 1 1 100%; /* En móviles, cada miembro ocupa el ancho completo */
     }
+
+      .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 60%;
+      height: 60%;
+      max-width: 500px;
+      margin: auto;
+      position: relative;
+      text-align: center;
+  }
+      
   }
   
