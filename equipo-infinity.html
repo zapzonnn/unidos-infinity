@@ -86,17 +86,42 @@
     
      <div class="team-container">
           
-        <div class="team-member fade-in">
+        <div class="team-member fade-in"  data-card="1">
               <img src="imagenes/equipo/IMG-iman.jpg" alt="Foto Corazón Cubano" loading="lazy">
              <p class="name">Iman</p>
              <p class="position">Fundadora</p>
+             <a href="#" class="view-more"  data-modal="1">Ver más</a>
         </div>
 
-        <div class="team-member fade-in">
+        <div class="modal" id="infoModal-1">
+          <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <img src="imagenes/equipo/IMG-iman.jpg" alt="Foto Corazón Cubano" loading="lazy">
+              <p class="name">Iman</p>
+              <p class="position">Fundadora</p>
+              <p></p>
+          </div>
+      </div>
+
+
+
+        <div class="team-member fade-in"  data-card="2">
             <img src="imagenes/equipo/IMG-inma.jpg" alt="Foto Corazón Cubano" loading="lazy">
            <p class="name">Inma</p>
            <p class="position">Fundadora</p>
+           <a href="#" class="view-more"  data-modal="2">Ver más</a>
       </div>
+
+      <div class="modal" id="infoModal-2">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="imagenes/equipo/IMG-inma.jpg" alt="Foto Corazón Cubano" loading="lazy">
+           <p class="name">Inma</p>
+           <p class="position">Fundadora</p>
+           <p></p>
+        </div>
+    </div>
+
 
       </div>
   </section>
@@ -108,22 +133,23 @@
     <div class="footer-section">
       <h4>Contacto</h4>
       <p>Teléfono: +34 604 161 416</p>
-      <p>Email: a.unidosinfinity@loverstravel.es</p>
+      <p>Email: <a href="mailto:a.unidosinfinity@loverstravel.es">a.unidosinfinity@loverstravel.es</a></p>
     </div>
 
     <div class="footer-section">
       <h4>Enlaces útiles</h4>
       <ul>
-        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="projectos.html">Proyectos</a></li>
         <li><a href="donar.html">Cómo Donar</a></li>
       </ul>
     </div>
 
     <div class="footer-section">
       <h4>Síguenos</h4>
-      <a href="https://facebook.com/tuong" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com/tuong" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com/tuong" target="_blank"><i class="fab fa-instagram"></i></a>
+       <div class="footer-sectionI">
+        <a href="https://wa.me/34604161416" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/ong.unidosinfinity/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+       </div>
     </div>
 
     <div class="footer-section">
@@ -135,7 +161,7 @@
     <div class="footer-bottom">
       <p>© 2024 UNIDOS INFINITY. Todos los derechos reservados.</p>
       <p>ONG sin fines de lucro registrada.</p>
-      <img src="imagenes/logos unidos infinity/IMG-logoBG.png" alt="sub-logo" loading="lazy">
+      <img src="imagenes/logos unidos infinity/IMG-logoBG.png" alt="Logo BG">
     </div>
   </div>
 </footer>
@@ -175,6 +201,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Ejecutar la función al cargar la página para capturar elementos visibles
   handleScroll();
+});
+
+// Seleccionar todos los botones de "Ver más"
+document.querySelectorAll('.view-more').forEach(function(button) {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const modalId = this.getAttribute('data-modal');
+        const modal = document.getElementById('infoModal-' + modalId);
+        modal.style.display = 'flex'; // Mostrar el modal correspondiente
+    });
+});
+
+// Seleccionar todos los botones de cerrar modal
+document.querySelectorAll('.close-btn').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const modal = this.closest('.modal');
+        modal.style.display = 'none'; // Ocultar el modal actual
+    });
+});
+
+// Cerrar el modal cuando se hace clic fuera del contenido
+window.addEventListener('click', function(e) {
+    document.querySelectorAll('.modal').forEach(function(modal) {
+        if (e.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
 });
 
 </script>
