@@ -3,18 +3,28 @@
     text-align: center;
   }
   
-  #team h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #bf2e33;
-  }
-  
   .projecto-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-bottom: 13%;
+  }
+
+  #title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgba(119, 119, 119, 0.377);
+    width: 95%;
+    margin: auto;
+    margin-bottom: 5%;
+  }
+
+  .projecto h2 {
+    font-size: 20px;
+    margin-top: 5%;
+    margin-bottom: 15%;
   }
   
   .projecto {
@@ -38,3 +48,15 @@
     border: black 1px solid;
   }
 
+  .projecto a {
+    font-size: 13px;
+    color: #fff;
+    padding: 5%;
+    text-decoration: none;
+    background-color: rgba(126, 118, 118, 0.719);
+    border-radius: 2px;
+  }
+
+  .projecto a:hover {
+    color: rgb(255, 251, 0);
+   }
