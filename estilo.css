@@ -1,7 +1,7 @@
 body {
   margin:  0;
   padding: 0;
-  font-family: "New Amsterdam", sans-serif;
+  font-family: "montserrat";
   background-color: #ffdec4;
 }
 
@@ -40,6 +40,5 @@ main {
   opacity: 1; /* Totalmente visible */
   transform: translateY(0); /* Regresa a la posición original */
 }
-
 
 
