@@ -72,6 +72,12 @@
     margin-bottom: 15%;
   }
   
+  .description {
+    text-align: justify; 
+    margin: 0; 
+    line-height: 1.5; 
+  }
+
   .modal {
     display: none; /* Oculto por defecto */
     position: fixed;
@@ -96,6 +102,30 @@
     margin: auto;
     position: relative;
     text-align: center;
+    overflow-y: auto;
+}
+
+/* Personalizar el scrollbar todos los navegadores */
+.modal-content {
+  scrollbar-width: thin; /* Para Firefox: hace el scrollbar más fino */
+  scrollbar-color: #888 transparent; /* Para Firefox: color del scrollbar y el fondo */
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 6px; /* Ancho del scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent; /* Color de fondo de la barra de desplazamiento */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color de la parte de la barra que se mueve */
+  border-radius: 10px; /* Borde redondeado para el scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color de la barra cuando se pasa el ratón por encima */
 }
 
 .modal img {
@@ -120,7 +150,7 @@
       flex: 1 1 100%; /* En móviles, cada miembro ocupa el ancho completo */
     }
 
-      .modal-content {
+    .modal-content {
       background-color: #fff;
       padding: 20px;
       border-radius: 10px;
@@ -130,7 +160,8 @@
       margin: auto;
       position: relative;
       text-align: center;
+      overflow-y: auto;
   }
-      
+
   }
   
